@@ -3,6 +3,7 @@ node_modules/
 .next-dev.log
 .next-start.log
 .next-start.err.log
+target-js/
 target-unveil.html
 target-unveil.css
 target-node2.js

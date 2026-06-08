@@ -1,0 +1,12 @@
+.mediaItem {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.caption {
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-caption);
+  line-height: 1.25;
+  margin: 0;
+}

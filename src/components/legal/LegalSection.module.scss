@@ -1,0 +1,42 @@
+.section {
+  border-top: 1px solid var(--color-border-soft);
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: minmax(7rem, 0.35fr) minmax(0, 1fr);
+  padding-top: 0.75rem;
+}
+
+.section h2 {
+  font-size: var(--font-size-nav);
+  font-weight: 400;
+  letter-spacing: var(--tracking-ui);
+  line-height: 1.05;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.copy {
+  color: var(--color-text-secondary);
+  display: grid;
+  gap: 1rem;
+  line-height: var(--line-height-legal);
+}
+
+.copy p,
+.copy ul {
+  margin: 0;
+}
+
+.copy ul {
+  padding-left: 1.1rem;
+}
+
+.copy li + li {
+  margin-top: var(--space-8);
+}
+
+@media (max-width: 42rem) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+}

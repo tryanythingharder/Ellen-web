@@ -1,0 +1,37 @@
+.meta {
+  align-items: start;
+  display: grid;
+  gap: var(--space-16);
+  grid-template-columns: 3.25rem minmax(0, 1fr);
+}
+
+.index {
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-caption);
+  margin: 0.3em 0 0;
+}
+
+.copy {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.copy h2 {
+  font-size: var(--font-size-section-title);
+  font-weight: 400;
+  letter-spacing: var(--tracking-tight);
+  line-height: 0.98;
+  margin: 0;
+}
+
+.copy p {
+  color: var(--color-text-secondary);
+  margin: 0;
+  max-width: 28rem;
+}
+
+@media (max-width: 44rem) {
+  .meta {
+    grid-template-columns: 2.25rem minmax(0, 1fr);
+  }
+}

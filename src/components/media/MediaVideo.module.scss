@@ -1,0 +1,13 @@
+.videoFrame {
+  background: #10100f;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.video {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}

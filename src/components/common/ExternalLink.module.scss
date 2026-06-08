@@ -1,0 +1,44 @@
+.link {
+  color: var(--color-link);
+  display: inline-flex;
+  position: relative;
+  transition:
+    color var(--duration-hover) var(--ease-standard),
+    opacity var(--duration-hover) var(--ease-standard);
+}
+
+.link::before,
+.link::after {
+  border-radius: inherit;
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.link::before {
+  border: 1px solid currentcolor;
+  opacity: 0.13;
+}
+
+.link::after {
+  background: currentcolor;
+  opacity: 0.03;
+}
+
+.link span {
+  opacity: 0.3;
+  position: relative;
+  transition: opacity var(--duration-hover) var(--ease-standard);
+  z-index: 1;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--color-link-active);
+}
+
+.link:hover span,
+.link:focus-visible span {
+  opacity: 1;
+}

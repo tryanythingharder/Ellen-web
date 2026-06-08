@@ -1,0 +1,59 @@
+.project {
+  width: 100%;
+}
+
+.project article {
+  display: grid;
+  gap: clamp(1.25rem, 3vw, 3rem);
+}
+
+.mediaRail {
+  display: grid;
+  gap: clamp(0.75rem, 1.8vw, 1.5rem);
+}
+
+.project article[data-layout="feature"] .mediaRail {
+  grid-template-columns: minmax(0, 1.35fr) minmax(15rem, 0.65fr);
+}
+
+.project article[data-layout="feature"] .mediaRail > :last-child {
+  align-self: end;
+  margin-bottom: clamp(0rem, 5vw, 5rem);
+}
+
+.project article[data-layout="diptych"] .mediaRail {
+  align-items: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project article[data-layout="diptych"] .mediaRail > :nth-child(2) {
+  margin-top: clamp(2rem, 8vw, 8rem);
+}
+
+.project article[data-layout="sequence"] .mediaRail {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.project article[data-layout="sequence"] .mediaRail > :nth-child(2) {
+  justify-self: end;
+  width: min(100%, 68rem);
+}
+
+.project article[data-layout="sequence"] .mediaRail > :nth-child(3) {
+  margin-left: clamp(0rem, 16vw, 18rem);
+  width: min(100%, 44rem);
+}
+
+@media (max-width: 48rem) {
+  .project article[data-layout] .mediaRail {
+    grid-template-columns: 1fr;
+  }
+
+  .project article[data-layout="feature"] .mediaRail > :last-child,
+  .project article[data-layout="diptych"] .mediaRail > :nth-child(2),
+  .project article[data-layout="sequence"] .mediaRail > :nth-child(2),
+  .project article[data-layout="sequence"] .mediaRail > :nth-child(3) {
+    margin: 0;
+    width: 100%;
+  }
+}

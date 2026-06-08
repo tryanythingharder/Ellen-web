@@ -1,0 +1,12 @@
+.page article {
+  display: grid;
+  gap: 3.8125rem;
+  margin-inline: auto;
+  padding-block: 9rem 7.75rem;
+  width: var(--container-reading);
+}
+
+.sections {
+  display: grid;
+  gap: 3.8125rem;
+}
